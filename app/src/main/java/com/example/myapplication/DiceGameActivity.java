@@ -23,6 +23,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.content.DialogInterface;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -272,6 +273,32 @@ public class DiceGameActivity extends AppCompatActivity {
         public void ChangeLight(SensorEvent temp) {
             float acc = temp.accuracy;
             float lux = temp.values[0];
+            try{
+               if(lux>=100){
+                   getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                   recreate();
+
+
+
+                }
+
+                if(lux<100){
+                   getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    //recreate();
+
+
+                }
+
+               } catch(Exception e){
+
+            }
+            
+            
+            
+            
+            
+            
+            
 //            if lightSensor:
     //            lightTV.setText("acc:"+acc+";"+"lux："+lux);
     //            亮度大于100 白天模式 亮度小于100夜间模式
