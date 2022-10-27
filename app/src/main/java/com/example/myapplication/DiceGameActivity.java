@@ -116,6 +116,7 @@ public class DiceGameActivity extends AppCompatActivity {
         currentResultMap = rollDice();
 
         diceCupImg = findViewById(R.id.imageDiceCup);
+//        TextView diceCupText = findViewById(R.id.shake_instruction);
         btnOpen = findViewById(R.id.open_btn);
         btnOpen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +124,7 @@ public class DiceGameActivity extends AppCompatActivity {
                 if (is_cover) {
                     displayStat(currentResultMap);
                     diceCupImg.setImageAlpha(0);
+//                    diceCupText.setVisibility(View.INVISIBLE);
                     btnOpen.setText(R.string.cover_button);
                     is_cover = false;
                 }
@@ -130,6 +132,7 @@ public class DiceGameActivity extends AppCompatActivity {
                 else {
                     hideTextView();
                     diceCupImg.setImageAlpha(255);
+//                    diceCupText.setVisibility(View.VISIBLE);
                     btnOpen.setText(R.string.open_button);
                     is_cover = true;
                 }
@@ -144,6 +147,7 @@ public class DiceGameActivity extends AppCompatActivity {
                 is_cover = true;
                 hideTextView();
                 diceCupImg.setImageAlpha(255);
+//                diceCupText.setVisibility(View.VISIBLE);
                 btnOpen.setText(R.string.open_button);
                 currentResultMap = rollDice();
                 if(vibrationSensor)

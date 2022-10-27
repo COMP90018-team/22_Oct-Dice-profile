@@ -204,7 +204,7 @@
             android:layout_width="120dp"
             android:layout_height="80dp"
             android:layout_below="@+id/imageBase0"
-            android:layout_marginStart="215dp"
+            android:layout_marginStart="200dp"
             android:layout_marginTop="-40dp"
             android:scaleType="centerInside"
             android:src="@drawable/empty_dice" />
@@ -273,6 +273,19 @@
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:src="@drawable/dicecup_img_trans" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/shake_instruction"-->
+<!--            android:alpha = "0.5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="16sp"-->
+<!--            android:fontFamily="@font/chunkfiveregular"-->
+<!--            android:text="Click the Shake button \n or \n shake your devices to \n scramble the dice" />-->
 
     </RelativeLayout>
 
